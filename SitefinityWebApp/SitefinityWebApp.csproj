@@ -876,6 +876,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ajax-loader.gif" />
+    <Content Include="App_Data\appStatusReport.html" />
+    <Content Include="App_Data\GeoLocation\citieslist.txt" />
     <Content Include="ClientBin\Telerik.Sitefinity.Analytics.xap" />
     <Content Include="ClientBin\Telerik.Sitefinity.Silverlight.xap" />
     <Content Include="Default.aspx" />
@@ -1149,12 +1151,14 @@
     <Content Include="App_Data\RadSpell\fr-FR.tdf" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Sitefinity\" />
+    <Folder Include="App_Data\Sitefinity\Temp\Libraries\" />
+    <Folder Include="App_Data\Storage\FileSystem\" />
     <Folder Include="ResourcePackages\BootstrapCustom\assets\src\sass\sitefinity\" />
     <Folder Include="ResourcePackages\Bootstrap\assets\dist\images\social-share\" />
     <Folder Include="ResourcePackages\Bootstrap\assets\fonts\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DevMagazine.bak" />
     <None Include="App_Data\GeoLocation\GeoLiteCity.dat" />
     <Content Include="Mvc\Views\Issue\List.LatestIssue.cshtml" />
     <Content Include="Mvc\Views\News\Detail.EmptyArticle.cshtml" />
@@ -1562,6 +1566,92 @@
     <Content Include="Areas\BugTracker\Views\Bug\BugMaster.cshtml" />
     <Content Include="Areas\BugTracker\Views\Project\ProjectMaster.cshtml" />
     <Content Include="Areas\BugTracker\Views\Shared\BugTrackerLayout.cshtml" />
+    <Content Include="App_Data\Sitefinity\Configuration\AnalyticsConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\AppearanceConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\CatalogConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\CatalogConfig.contentViewControls.ProductsBackendDefinitionName.views.ProductsBackendMaster.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\CatalogConfig.contentViewControls.ProductTypesBackendDefinitionName.views.ProductTypesBackendMaster.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\CommentsModuleConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\ContentViewConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DataConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DigitalExperienceCloudConnectorConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Authors.Author_AthrBckndLst.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Authors.Author_BckndDplctVw.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Authors.Author_BckndInsrtVw.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Authors.Author_hrBckndEdtVw.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Issues.Issue_BckndDplctVw.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Issues.Issue_BckndInsrtVw.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Issues.Issue_IssuBckndLst.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Issues.Issue_ssBckndEdtVw.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Project.Bug-577081995_BugBackndLst.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\DynamicModulesConfig.Project.Project-2116437337_rjctBckndLst.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\EcommerceConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\FormsConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\ForumsConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\LibrariesConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\MigrationConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\NewsConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendDuplicate.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendEdit.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendInsert.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendPreview.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendVersionPreview.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\PagesConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\PersonalizationConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\ProjectConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\ResourcesConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\SearchConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\SecurityConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\SystemConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\ToolboxesConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\TranslationsConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\VersionConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\VirtualPathSettingsConfig.config" />
+    <Content Include="App_Data\Sitefinity\Configuration\WorkflowConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\AnalyticsConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\AppearanceConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\CatalogConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\CatalogConfig.contentViewControls.ProductsBackendDefinitionName.views.ProductsBackendMaster.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\CatalogConfig.contentViewControls.ProductTypesBackendDefinitionName.views.ProductTypesBackendMaster.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\CommentsModuleConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\ContentViewConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\DataConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\DigitalExperienceCloudConnectorConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\DynamicModulesConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\EcommerceConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\FormsConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\ForumsConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\LibrariesConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\NewsConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendDuplicate.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendEdit.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendInsert.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendPreview.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\NewsConfig.contentViewControls.NewsBackend.views.NewsBackendVersionPreview.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\PagesConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\PersonalizationConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\ProjectConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\ResourcesConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\SecurityConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\SystemConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\ToolboxesConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\VirtualPathSettingsConfig.config" />
+    <Content Include="App_Data\Sitefinity\ConfigurationNEW\WorkflowConfig.config" />
+    <Content Include="App_Data\Sitefinity\Logs\72bc9244-970a-4428-9a0c-4ae0481c8d05Error.log" />
+    <Content Include="App_Data\Sitefinity\Logs\Error.2016-12-04.1.log" />
+    <Content Include="App_Data\Sitefinity\Logs\Error.2016-12-06.1.log" />
+    <Content Include="App_Data\Sitefinity\Logs\Error.2016-12-07.1.log" />
+    <Content Include="App_Data\Sitefinity\Logs\Error.2016-12-08.1.log" />
+    <Content Include="App_Data\Sitefinity\Logs\Error.log" />
+    <Content Include="App_Data\Sitefinity\Logs\Trace.2016-12-08.1.log" />
+    <Content Include="App_Data\Sitefinity\Logs\Trace.log" />
+    <Content Include="App_Data\Sitefinity\Logs\UpgradeTrace.2016-12-04.1.log" />
+    <Content Include="App_Data\Sitefinity\Logs\UpgradeTrace.2016-12-08.1.log" />
+    <Content Include="App_Data\Sitefinity\Logs\UpgradeTrace.log" />
+    <Content Include="App_Data\Sitefinity\Search\articles\_0.cfs" />
+    <Content Include="App_Data\Sitefinity\Search\main\segments.gen" />
+    <Content Include="App_Data\Sitefinity\Sitefinity.lic" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AuthorWidget\AuthorWidget.csproj">
