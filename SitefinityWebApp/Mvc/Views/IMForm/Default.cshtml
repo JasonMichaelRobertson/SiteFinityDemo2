@@ -1,0 +1,99 @@
+﻿@model SitefinityWebApp.Mvc.Models.IMFormModel
+
+@using Telerik.Sitefinity.UI.MVC;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Services;
+
+<div class="mvcwidget">
+    
+    <h4 style="margin-bottom:30px;" class="BigWording">
+        @*@Html.Raw(Model.Message)*@
+        Register Your Details </h4>
+    
+    @using (Html.BeginForm())
+    { 
+            @Html.ValidationSummary(true)
+    
+            <fieldset>
+                <legend style="display:none; font-size:14px">Register Your Details</legend>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.FirstName)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.TextBoxFor(model => model.FirstName, new { placeholder="please enter your first name", tabindex = 1 })
+                        @Html.ValidationMessageFor(model => model.FirstName)
+                    </div>
+                </div>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.LastName)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.TextBoxFor(model => model.LastName, new { placeholder = "please enter your last name", tabindex = 2 })
+                        @Html.ValidationMessageFor(model => model.LastName)
+                    </div>
+                </div>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.EmailAddress)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.TextBoxFor(model => model.EmailAddress, new { placeholder = "please enter your email address", tabindex = 3 })
+                        @Html.ValidationMessageFor(model => model.EmailAddress)
+                    </div>
+                </div>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.PhoneNumber)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { placeholder = "please enter your phone number", tabindex = 4 })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber)
+                    </div>
+                </div>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Referrer)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.TextBoxFor(model => model.Referrer, new { placeholder = "please enter your referrer", tabindex = 5 })
+                        @Html.ValidationMessageFor(model => model.Referrer)
+                    </div>
+                </div>
+
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.PreferredLanguageSelected)      
+                    </div>           
+                    <div class="editor-field-short">
+                        <span class="select-space">@Html.DropDownListFor(model => model.PreferredLanguageSelected, Model.PreferredLanguages, "Please Select", new { tabindex = 6 })</span>
+                        @Html.ValidationMessageFor(model => model.PreferredLanguageSelected)                           
+                    </div>
+                </div>                                      
+                
+                <div class="container-field">             
+                    <div class="editor-chk">
+                        @Html.CheckBoxFor(model => model.SubscribeToPublications, new { tabindex =  7 })
+                    </div>
+                    <div class="editor-chk-lbl">
+                        @Html.LabelFor(model => model.SubscribeToPublications, new { @class="label-chk" })
+                    </div>
+                </div>
+                
+                <div class="container-button">
+                    <div>
+                        <input tabindex="8" class="btn-im-submit" id="btnIMForm" title="Submit" value="Submit"  type="submit" type="image" src="/Sitefinity/WebsiteTemplates/Default/App_Themes/Default/Images/btn_enter.gif" />
+                    </div>
+                </div>               
+    
+            </fieldset>    
+    }
+</div>
+<br />

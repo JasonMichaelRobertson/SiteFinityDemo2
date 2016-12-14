@@ -1,0 +1,221 @@
+@model SitefinityWebApp.Mvc.Models.SaleSubscribeFormModel
+
+@using Telerik.Sitefinity.UI.MVC;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Services;
+
+<div class="mvcwidget">
+    
+    <h1 style="margin-bottom:30px;" class="BigWording">
+        @Html.Raw(Model.Message)
+    </h1>
+    
+    @using (Html.BeginForm())
+    { 
+            @Html.ValidationSummary(true)
+            <h4>Register Your Details</h4>
+            <fieldset>                
+                <legend style="display:none;"></legend>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.FirstName)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.EditorFor(model => model.FirstName)
+                        @Html.ValidationMessageFor(model => model.FirstName)
+                    </div>
+                </div>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.LastName)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.EditorFor(model => model.LastName)
+                        @Html.ValidationMessageFor(model => model.LastName)
+                    </div>
+                </div>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Organisation)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.EditorFor(model => Model.Organisation)
+                        @Html.ValidationMessageFor(model => model.Organisation)
+            
+                    </div>
+                </div>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.EmailAddress)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.EditorFor(model => model.EmailAddress)
+                        @Html.ValidationMessageFor(model => model.EmailAddress)
+                    </div>
+                </div>
+        
+                <div class="container-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Phone)
+                    </div>
+                    <div class="editor-field-short">
+                        @Html.EditorFor(model => model.Phone)
+                        @Html.ValidationMessageFor(model => model.Phone)
+                    </div>
+                </div>
+        
+                <br />
+        
+                <!-- All -->
+                <div style="float:left; width:100%; display:block;">
+                    <br />                   
+                    <h4 class="im-heading">
+                           Check for industry asset sale notifications.
+                    </h4>
+                    <div class="container-field-all">
+                        <div class="editor-chk-all">
+                            @Html.EditorFor(model => model.All)
+                        </div>
+                        <div class="editor-chk-lbl-all">
+                            @Html.LabelFor(model => model.All)
+                        </div>
+                    </div>
+                    <br />
+                </div>
+        
+                <hr />
+                <br />
+        
+                <!-- Other Check Boxes -->
+                <div style="float:left; width:50%; display:inline-block;">
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.Agribusiness)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.Agribusiness)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.Aviation)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.Aviation)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.BuildingConstruction)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.BuildingConstruction)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.EducationTraining)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.EducationTraining)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.FinanceBusinessServices)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.FinanceBusinessServices)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.FoodBeverage)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.FoodBeverage)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.HealthAgedCare)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.HealthAgedCare)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.HospitalityLeisure)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.HospitalityLeisure)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.InformationTechnology)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.InformationTechnology)
+                    </div>
+        
+                </div>
+        
+                <div style="float:right; width:50%; display:inline-block;">
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.RetailConsumer)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.RetailConsumer)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.PrinitngPublishing)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.PrinitngPublishing)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.RealEstate)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.RealEstate)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.RetailConsumer)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.RetailConsumer)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.TextileClothingFootwear)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.TextileClothingFootwear)
+                    </div>
+            
+                    <div class="editor-chk-sa">
+                        @Html.EditorFor(model => model.TransportLogistics)
+                    </div>
+                    <div class="editor-chk-sa-lbl">
+                        @Html.LabelFor(model => model.TransportLogistics)
+                    </div>
+        
+                </div>
+        
+                <br />
+                <br />
+        
+                <div class="container-button">
+                    <div>
+                        <input style="margin-top:5px;" id="btnIMForm" alt="Enter" class="subscribeButton" value="Enter"  type="image" src="/Sitefinity/WebsiteTemplates/Default/App_Themes/Default/Images/btn_enter.gif" />		
+                    </div>
+                </div>
+    
+            </fieldset>    
+    }
+
+</div>
+<br />

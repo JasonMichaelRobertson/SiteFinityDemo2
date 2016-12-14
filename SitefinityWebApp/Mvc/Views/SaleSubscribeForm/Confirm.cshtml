@@ -1,0 +1,76 @@
+@model SitefinityWebApp.Mvc.Models.SaleSubscribeFormModel
+
+@using Telerik.Sitefinity.UI.MVC;
+
+<div class="mvcwidget">
+    
+    <h1 class="BigWording">
+        @Html.Raw(Model.Message)
+    </h1>
+    
+    <fieldset style="height:70%;">
+        
+        <legend style="display:none;">Register Your Details</legend>
+        
+        <div class="container-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.FirstName)
+            </div>
+            <div class="display-field-short">
+                @Html.DisplayFor(model => model.FirstName)
+            </div>
+        </div>
+        
+        <div class="container-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LastName)
+            </div>
+            <div class="display-field-short">
+                @Html.DisplayFor(model => model.LastName)
+            
+            </div>
+        </div>
+        
+        <div class="container-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Organisation)
+            </div>
+            <div class="display-field-short">
+                @Html.DisplayFor(model => model.Organisation)
+            </div>
+        </div>
+        
+        <div class="container-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.EmailAddress)
+            </div>
+            <div class="display-field-short">
+                <span></span>@Html.DisplayFor(model => model.EmailAddress)
+            
+            </div>
+        </div>
+        
+        <div class="container-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Phone)
+            </div>
+            <div class="display-field-short">
+                <span></span>@Html.DisplayFor(model => model.Phone)
+            
+            </div>
+        </div>
+        <br />
+        <hr />
+        <br />
+        <div class="container-field" style="display:block; height:100%;">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.ConfirmSelectedIndustries)
+            </div>
+            <div class="display-field-short" style="display:block; height:100%;">
+                @Html.Raw(Html.Encode(Model.ConfirmSelectedIndustries).Replace("\n\r", "<br/>"))
+            </div>
+        </div>
+    
+    </fieldset>
+
+</div>

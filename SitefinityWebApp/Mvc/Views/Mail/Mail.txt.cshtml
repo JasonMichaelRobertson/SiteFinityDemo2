@@ -1,0 +1,19 @@
+﻿@*@using Telerik.Sitefinity.UI.MVC;
+@using ActionMailer.Net
+@using ActionMailer.Net.Mvc*@
+
+@model SitefinityWebApp.Mvc.Models.EmailModel
+
+@using Telerik.Sitefinity.UI.MVC;
+
+@{
+    Layout = null;
+}
+
+Welcome to My Cool Site, @Model.FirstName
+
+We need you to verify your email.  Click this nifty link to get verified!
+
+@*@Url.AbsoluteAction("Verify", "Account", new { fullname = @Model.FullName() })*@
+
+Thanks!

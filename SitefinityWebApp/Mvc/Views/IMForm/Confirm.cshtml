@@ -1,0 +1,98 @@
+@model SitefinityWebApp.Mvc.Models.IMFormModel
+
+@using Telerik.Sitefinity.UI.MVC;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Services;
+
+<div class="mvcwidget">
+
+    <h4 style="margin-bottom:30px;" class="BigWording">
+        @Html.Raw(Model.Message)
+    </h4>
+
+    <fieldset>
+
+        <legend class="BigWording" style="display:none;">Register Your Details</legend>
+
+        <div class="container-field">
+	        <div class="editor-label">
+
+		        @Html.LabelFor(model => model.FirstName)      
+
+
+            </div>
+            <div class="display-field-short">
+                @Html.DisplayFor(model => model.FirstName)      
+            </div>
+        </div>
+
+        <div class="container-field">
+	        <div class="editor-label">
+		        @Html.LabelFor(model => model.LastName)      
+            </div>
+            <div class="display-field-short">
+                @Html.DisplayFor(model => model.LastName)       
+            </div>
+        </div>
+
+        <div class="container-field">
+	        <div class="editor-label">
+		        @Html.LabelFor(model => model.EmailAddress)      
+            </div>
+            <div class="display-field-short">
+                @Html.DisplayFor(model => model.EmailAddress)       
+            </div>
+        </div>
+
+        <div class="container-field">
+	        <div class="editor-label">
+		        @Html.LabelFor(model => model.PhoneNumber)      
+            </div>
+            <div class="display-field-short">
+                @Html.DisplayFor(model => model.PhoneNumber)       
+            </div>
+        </div>
+
+        <div class="container-field">
+	        <div class="editor-label">
+		        @Html.LabelFor(model => model.Referrer)      
+            </div>
+            <div class="display-field-short">
+                <span></span>@Html.DisplayFor(model => model.Referrer)
+       
+            </div>
+        </div>
+
+        <div class="container-field">
+	        <div class="editor-label">
+		        @Html.LabelFor(model => model.PreferredLanguageSelected)      
+            </div>           
+            <div class="display-field-short">
+                @Html.DisplayFor(model => model.DisplaySelectedPreferredLanguage)                    
+            </div>
+        </div>      
+
+      @*  <div class="container-field">
+	        <div class="editor-label">
+		        @Html.LabelFor(model => model.FundInterestSelected)      
+            </div>           
+            <div class="display-field-short">
+                @Html.DisplayFor(model => model.DisplaySelectedFundInterest)                    
+            </div>
+        </div>    *@  
+
+        <br />
+        <hr />        
+        <div class="container-message" style="display:block; height:100%;">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SubscribeToPublicationsMessage)
+            </div>
+            <div class="display-message" style="display:block; height:100%;">
+                @Html.Raw(Html.Encode(Model.SubscribeToPublicationsMessage).Replace("\n\r", "<br/>"))
+            </div>
+        </div>
+
+    </fieldset>
+
+</div>
